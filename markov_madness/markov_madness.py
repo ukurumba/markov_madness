@@ -20,7 +20,14 @@ def predictor(regseasonstats,teams,vars,coefficients):
     and the team name in the third column, for the top 16 teams. 
     '''
     
-    
+import pandas as pd
+import numexpr
+import bottleneck
+import numpy as np
+import numpy.linalg as linalg
+import matplotlib.pyplot as plt
+%matplotlib inline
+import scipy.stats as ss
 
     #renaming columns, forming 'per game' data, turning it all into a matrix. The usual stuff.
     col_numbers=[]
